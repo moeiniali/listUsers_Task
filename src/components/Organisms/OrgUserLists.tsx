@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { OrgUserDetails } from '../ExAllCo';
+import React from 'react';
 import { fetchUserData } from '../../api/fetchData';
 import { useQuery } from '@tanstack/react-query';
 import Table from '@mui/material/Table';
@@ -9,7 +8,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { router } from '../../routes/router';
 import { useNavigate } from 'react-router-dom';
 type Props = {}
 type User = {

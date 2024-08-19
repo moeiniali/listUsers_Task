@@ -1,6 +1,5 @@
 import { createHashRouter } from "react-router-dom";
 import { UserPages, TmUserLists } from "../components/ExAllCo";
-import { useParams } from "react-router-dom";
 import { OrgUserDetails } from "../components/ExAllCo";
 
 export const router = createHashRouter([
