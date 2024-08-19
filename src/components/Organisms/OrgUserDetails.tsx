@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -9,8 +9,7 @@ import Paper from '@mui/material/Paper';
 import { useQuery } from '@tanstack/react-query';
 import { fetchUserDetails } from '../../api/fetchData';
 import { useParams } from 'react-router-dom';
-
-
+import { Loading } from '../ExAllCo';
 interface elemTypes {
  name?: string;
  email?: string;
@@ -68,8 +67,11 @@ const OrgUserDetails: React.FC<Props> = () => {
 
 
 
+
+
+
  if (isPending) {
-  return <span>Loading...</span>;
+  return <Loading />;
  }
 
  if (isError) {

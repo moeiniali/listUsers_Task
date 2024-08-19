@@ -9,6 +9,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useNavigate } from 'react-router-dom';
+import { Loading } from '../ExAllCo';
+
+
 type Props = {}
 type User = {
   name: string;
@@ -38,7 +41,7 @@ const OrgUserLists = (props: Props) => {
 
 
   if (isPending) {
-    return <span>Loading...</span>
+    return <Loading />;
   }
 
   if (isError) {
